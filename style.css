@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #FFD371;
+    background: linear-gradient(90deg, rgba(60,59,66,1) 0%, rgba(121,14,9,1) 53%, rgba(255,175,0,1) 100%);
+}
+
+/*============================HEADER=====================================================*/
+
+.navBar li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #6E85B2;
+}
+ 
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    background: #3E2C41;
+    
+    
+    
+}
+
+.music audio{
+    margin-top: 10px;
+    width: 150px;
+    height: 20px;
+    
+    margin-left: 50px;
+}
+
+.accesos ul, .cartCountry ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    
+    
+}
+
+.accesos li, .cartCountry li {
+    margin: 5px;
+}
+
+.logo i {
+    font-size: 400px;
+    color: #BD1616;
+    animation-name: logo;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-fill-mode: initial;
+    animation-iteration-count: infinite;
+
+}
+.logoName h1 {
+    color: #BD1616;
+    animation-name: logo;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-fill-mode: initial;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo {
+    0%{
+        color: #BD1616;
+    }
+    25%{
+        color: #334756;
+    }
+    50%{
+        color: #FFB740;
+    }
+    75%{
+        color: #334756;
+    }
+    100%{
+       color: #BD1616; 
+    }
+    
+}
+
+.logoName {
+    margin-bottom: 0px;
+    text-align: center;
+    background: url(/assets/logoBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/*.videoContainer video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: fixed;    
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+  z-index: -100;
+  background-size: cover;
+
+}*/
+
+@media (max-width: 500px) {
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+
+    .logo i {
+        font-size: 150px;
+        color: #BD1616;
+        animation-name: logo;
+        animation-delay: 0s;
+        animation-timing-function: linear;
+        animation-duration: 5s;
+        animation-fill-mode: initial;
+        animation-iteration-count: infinite;
+    
+    
+}
+    }
+
+
+
+/*=========================Last News Section====================================*/
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #297f877a;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.imgNews {
+    margin: 10px;
+    text-align: center;
+}
+
+.imgNews img {
+    width: 200px;
+    
+
+}
+
+@media (max-width:500px){
+    .imgContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .imgNews img {
+        width: 110px;
+    }
+}
+
+/*=====================Store====================================*/
+
+.store {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    background-color: rgba(77, 11, 77, 0.596);
+    border-radius: 5px;
+
+}
+.store h1 {
+    font-size: 40px;
+    color: rgb(231, 22, 231);
+}
+
+.genres, .searchMenu form {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    
+}
+
+.searchMenu form>* {
+    margin: 7px;
+}
+
+.genres>* {
+    margin: 7px;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    
+}
+
+.game img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 4px 10px 27px 1px rgba(0,0,0,0.84);
+-webkit-box-shadow: 4px 10px 27px 1px rgba(0,0,0,0.84);
+-moz-box-shadow: 4px 10px 27px 1px rgba(0,0,0,0.84);
+}
+
+@media (max-width:500px){
+    .store {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .games {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .game img {
+        width: 100px;
+        height: 150px;
+    }
+    .genres, .searchMenu form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+        
+    }
+}
+/*=============================================USERS=========================================*/
+
+.user {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(112, 21, 37, 0.383);
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.signIn form, .logIn form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(/assets/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+
+}
+
+.user form>* {
+    margin: 3px;
+    border-color: black;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.button {
+    border-style: none;
+    border-radius: 4px;
+    background: radial-gradient(circle, rgba(226,40,56,1) 0%, rgba(252,180,70,1) 100%);
+    color: white;
+    width: 100px;
+    height: 20px;
+    
+}
+
+.button:hover {
+    cursor: pointer;
+    width: 110px;
+    border-radius: 30px;
+    background: radial-gradient(circle, rgb(168, 84, 5) 0%, rgb(192, 35, 35) 100%);
+    color: rgb(19, 12, 122);
+    font-weight: bold;
+}
+
+@media (max-width:500px){
+    .user {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .user form {
+        margin: 10px;
+    }
+}
+
+/*===============================================Apps========================================*/
+
+
+.apps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px;
+}
+
+.logo2 {
+    text-align: center;
+    font-size: 100px;
+    color: red;
+}
+
+.mobileStore {
+    text-align: center;
+}
+
+.mobileStore img {
+    width: 100px;
+
+}
+
+.social {
+    text-align: center;
+    
+}
+
+.social a {
+    margin: 20px;
+    font-size: 30px;
+    color: white;
+}
+@media (max-width:500px){
+    .logo2 {
+        font-size: 50px;
+        text-align: center;
+        
+    }
+
+    .mobileStore img {
+        width: 50px;
+        
+        
+    }    
+    .apps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    .apps h3 {
+       display: none;
+        
+    }
+    .socialMedia {
+        font-size: 10px;
+    }
+   
+}
+
+/*==============================Payments===============*/
+
+.payments {
+    text-align: center;
+    background-color: rgba(158, 155, 155, 0.301) ;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.payments i {
+    font-size: 100px;
+    color: black;
+
+}
+
+.payIcon {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+@media (max-width:500px){
+    .payments i {
+        font-size: 60px;
+
+    }
+    .payments {
+        text-align: center;
+        background-color: rgba(158, 155, 155, 0.301) ;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+/*==================================================foooter===================================*/
+
+.footer {
+    text-align: center;
+}
